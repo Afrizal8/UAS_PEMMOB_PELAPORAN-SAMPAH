@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "88062793024",
+    "project_id": "pelaporan-sampah-a814d",
+    "storage_bucket": "pelaporan-sampah-a814d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88062793024:android:85f973b79912245430d6a5",
+        "android_client_info": {
+          "package_name": "com.example.pelaporan_sampah"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLreFkq3b5lr3saBjdKVCsAC-aJqHEN5M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
