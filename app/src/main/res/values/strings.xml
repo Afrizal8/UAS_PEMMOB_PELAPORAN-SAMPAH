@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">pelaporan-sampah</string>
+    <string name="app_name">KitaBersih</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_report">Lapor</string>
+    <string name="title_history">Riwayat</string>
+    <string name="title_profile">Profil</string>
 </resources>
