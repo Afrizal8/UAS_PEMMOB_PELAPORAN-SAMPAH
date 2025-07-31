@@ -21,17 +21,30 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+    ): View? {
+        val homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
+        // Observing changes from ViewModel for the 'text' value (you are already doing this for the other TextView)
         homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+            // Set the value to some TextView if needed, for example:
+            // tvSomeText.text = it
         }
+
+        // Bindings for the statistics or other information
+        val tvProcessedCount: TextView = binding.tvProcessedCount
+        val tvTodayCount: TextView = binding.tvTodayCount
+        val tvCompletedCount: TextView = binding.tvCompletedCount
+        val tvTotalCount: TextView = binding.tvTotalCount
+
+        // Set the text for statistics (these values should ideally come from your ViewModel or API)
+        tvProcessedCount.text = "3"
+        tvTodayCount.text = "1"
+        tvCompletedCount.text = "8"
+        tvTotalCount.text = "12"
+
         return root
     }
 
