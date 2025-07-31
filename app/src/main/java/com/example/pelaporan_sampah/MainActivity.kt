@@ -1,5 +1,6 @@
 package com.example.pelaporan_sampah
 
+import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.LinearLayout
@@ -16,6 +17,7 @@ import androidx.core.view.WindowCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -50,6 +52,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        changeStatusBarColor()
+
         // Setup edge-to-edge display
         setupEdgeToEdge()
 
@@ -71,6 +75,12 @@ class MainActivity : AppCompatActivity() {
             setActiveNavigation(0) // Home is index 0
         }
     }
+    private fun changeStatusBarColor() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.statusBarColor = ContextCompat.getColor(this, R.color.green_primary)
+        }
+    }
+
 
     private fun setupEdgeToEdge() {
         // Enable edge-to-edge display
