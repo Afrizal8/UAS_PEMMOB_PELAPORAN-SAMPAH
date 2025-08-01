@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="4dp"
+    android:layout_marginVertical="2dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    android:backgroundTint="@android:color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Header dengan tanggal dan status -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvTanggal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="11sp"
+                android:textColor="@android:color/darker_gray"
+                tools:text="01 Aug 2025, 19:16" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_status_menunggu"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                tools:text="MENUNGGU" />
+
+        </LinearLayout>
+
+        <!-- Jenis Sampah -->
+        <TextView
+            android:id="@+id/tvJenisSampah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="6dp"
+            tools:text="Sampah Berbahaya" />
+
+        <!-- Deskripsi -->
+        <TextView
+            android:id="@+id/tvDeskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="2dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="Sampah berbahaya ditemukan di area..." />
+
+        <!-- Lokasi -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/ic_location"
+                app:tint="@color/green_primary" />
+
+            <TextView
+                android:id="@+id/tvLokasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginStart="4dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                tools:text="Jl. Anggrek 3 No.9, Rancamanyar..." />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

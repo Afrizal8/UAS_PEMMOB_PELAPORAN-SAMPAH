@@ -10,7 +10,7 @@ class SessionManager(context: Context) {
     private val prefs: SharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
 
     companion object {
-        private const val PREF_NAME = "EcoGreenSession"
+        private const val PREF_NAME = "KitaBersihSession"
         private const val KEY_USER_UID = "user_uid"
         private const val KEY_USER_NAME = "user_name"
         private const val KEY_USER_EMAIL = "user_email"

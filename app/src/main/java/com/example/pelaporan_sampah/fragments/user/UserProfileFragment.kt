@@ -61,8 +61,8 @@ class UserProfileFragment : Fragment() {
 
     private fun showAboutDialog() {
         AlertDialog.Builder(requireContext())
-            .setTitle("Tentang EcoGreen")
-            .setMessage("EcoGreen v1.0\n\nAplikasi pelaporan sampah untuk menjaga kebersihan lingkungan.\n\nDikembangkan untuk UAS Pemrograman Mobile.")
+            .setTitle("Tentang KitaBersih")
+            .setMessage("KitaBersih v1.0\n\nAplikasi pelaporan sampah untuk menjaga kebersihan lingkungan.\n\nDikembangkan untuk UAS Pemrograman Mobile.")
             .setPositiveButton("OK") { dialog, _ ->
                 dialog.dismiss()
             }
