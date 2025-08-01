@@ -1,0 +1,48 @@
+package com.example.pelaporan_sampah.fragments.petugas
+
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import com.example.pelaporan_sampah.databinding.FragmentPetugasHomeBinding
+import com.example.pelaporan_sampah.repository.UserRepository
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.example.pelaporan_sampah.R
+
+class PetugasHomeFragment : Fragment() {
+    private var _binding: FragmentPetugasHomeBinding? = null
+    private val binding get() = _binding!!
+    private lateinit var userRepository: UserRepository
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentPetugasHomeBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        userRepository = UserRepository(requireContext())
+
+        val currentUser = userRepository.getCurrentUserFromSession()
+        binding.tvPetugasName.text = currentUser?.nama ?: "Petugas"
+
+        binding.cardLihatLaporan.setOnClickListener {
+            val bottomNav = activity?.findViewById<BottomNavigationView>(R.id.bottom_navigation)
+            bottomNav?.selectedItemId = R.id.nav_reports
+        }
+
+        binding.cardTugasSaya.setOnClickListener {
+            val bottomNav = activity?.findViewById<BottomNavigationView>(R.id.bottom_navigation)
+            bottomNav?.selectedItemId = R.id.nav_tasks
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+}

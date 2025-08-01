@@ -7,4 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Green Colors for EcoGreen -->
+    <color name="green_primary">#4CAF50</color>
+    <color name="green_primary_dark">#388E3C</color>
+    <color name="green_accent">#8BC34A</color>
+    <color name="green_light">#E8F5E8</color>
 </resources>
