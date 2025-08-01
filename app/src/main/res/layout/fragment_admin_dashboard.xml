@@ -363,6 +363,7 @@
         </LinearLayout>
 
         <!-- Recent Activity -->
+        <!-- Recent Activity Section - Ganti bagian ini -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -390,24 +391,44 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="20dp">
+                    android:padding="16dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <!-- Container untuk Recent Activity Items -->
+                    <LinearLayout
+                        android:id="@+id/layoutRecentActivityContainer"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Belum ada aktivitas"
-                        android:textSize="16sp"
-                        android:textColor="@android:color/darker_gray"
-                        android:layout_gravity="center" />
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Aktivitas sistem akan muncul di sini"
-                        android:textSize="14sp"
-                        android:textColor="@android:color/darker_gray"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="4dp" />
+                        <!-- Default Empty State -->
+                        <LinearLayout
+                            android:id="@+id/layoutEmptyState"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="20dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Belum ada aktivitas"
+                                android:textSize="16sp"
+                                android:textColor="@android:color/darker_gray"
+                                android:layout_gravity="center" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Aktivitas sistem akan muncul di sini"
+                                android:textSize="14sp"
+                                android:textColor="@android:color/darker_gray"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="4dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
