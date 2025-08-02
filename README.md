@@ -1,4 +1,4 @@
-# UAS PELAPORAN SAMPAH
+# UAS Pemrograman Mobile - Aplikasi Pelaporan Sampah
 
 Aplikasi pelaporan sampah berbasis Android – memudahkan masyarakat dalam menyampaikan laporan sampah kepada petugas yang berwenang.
 
